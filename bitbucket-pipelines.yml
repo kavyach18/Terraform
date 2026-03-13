@@ -5,6 +5,7 @@ pipelines:
     - step:
         oidc: true
         script:
+          - cd environments/dev
           - export AWS_REGION=us-east-1
           - export AWS_ROLE_ARN=arn:aws:iam::533266997711:role/pipeline-oidc
           - export AWS_WEB_IDENTITY_TOKEN_FILE=$(pwd)/web-identity-token
@@ -12,5 +13,5 @@ pipelines:
           - echo $BITBUCKET_STEP_OIDC_TOKEN > $AWS_WEB_IDENTITY_TOKEN_FILE
 
           - terraform init
-          - terraform plan -chdir=environments/dev
-          - terraform apply -chdir=environments/dev
+          - terraform plan environments/dev
+          - terraform apply environments/dev
