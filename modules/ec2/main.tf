@@ -2,7 +2,7 @@ resource "aws_instance" "ec2" {
     ami = var.ami_id
     instance_type = var.instance_type
     tags = {
-        Name = "ec2-vpc-terraform"
+        Name = "ec2-vpc-terraform-env"
     }
    vpc_security_group_ids = ["${aws_security_group.ec2-security-group.id}"]
    subnet_id = var.subnet_id
