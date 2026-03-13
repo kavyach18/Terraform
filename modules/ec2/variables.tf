@@ -17,3 +17,8 @@ variable "vpc_id" {
   description = "VPC ID"
   type = string
 }
+
+variable "ec2_name" {
+  description = "EC2 name"
+  type = string
+}

@@ -1,5 +1,6 @@
 region        = "ap-south-1"
 vpc_cidr      = "10.10.0.0/16"
 subnet_cidr   = "10.10.1.0/24"
-ami_id        = "ami-02dfbd4ff395f2a1b"
+ami_id        = "ami-0f559c3642608c138"
 instance_type = "t3.medium"
+ec2_name = "ec2-prod-env"
