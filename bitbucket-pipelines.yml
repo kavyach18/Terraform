@@ -13,5 +13,5 @@ pipelines:
           - echo $BITBUCKET_STEP_OIDC_TOKEN > $AWS_WEB_IDENTITY_TOKEN_FILE
 
           - terraform init
-          - terraform plan environments/dev
-          - terraform apply environments/dev
+          - terraform plan 
+          - terraform apply
